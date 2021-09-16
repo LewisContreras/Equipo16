@@ -13,6 +13,9 @@ Encargado de facilitar las ceremonias del equipo y resolver impedimentos.
 Andres Rodriguez - Analista Sprint 1 
 Estudiante de Analisis de desarrollo de sistemas de información
 
+Lewis Contreras - Product Owner Sprint 1
+Apasionado por la tecnología y el deporte.
+
 Nicolas Romero - Base de datos 1
 Ingeniero mecatronico
 
