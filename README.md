@@ -15,3 +15,6 @@ Estudiante de Analisis de desarrollo de sistemas de información
 
 Lewis Contreras - Product Owner Sprint 1
 Apasionado por la tecnología y el deporte.
+
+Nicolas Romero - Base de datos 1
+Ingeniero mecatronico
