@@ -1,0 +1,11 @@
+HU_001: Cuenta con: tiene herramienta para administrar las fuentes/artefactos en la nube 
+NECESITA: cuando necesite crear un repositorio con mi propia cuenta, necesita un lugar en GitHub para almacenar la información/artefactos/fuentes de los proyectos de desarrollo 
+ 
+HU_002: Cuenta con: repositorio de GitHub en la nube 
+NECESITA: cuando necesite subir artefactos, tener los artefactos ordenados en GitHub con la información del proyecto 
+ 
+HU_003: Cuenta con: la aplicación Git en la máquina local 
+NECESITA: cuando requiera enlazar un directorio con un repositorio GitHub, Entonces podré subir nuevos artefactos al repositorio en GitHub 
+ 
+HU_004: Cuenta con: la aplicación Git en la máquina local 
+NECESITA: requerir enlazar un directorio con un repositorio en GitHub, podré subir artefactos actualizados al repositorio en GitHub
