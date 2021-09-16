@@ -12,3 +12,6 @@ Encargado de facilitar las ceremonias del equipo y resolver impedimentos.
 
 Andres Rodriguez - Analista Sprint 1 
 Estudiante de Analisis de desarrollo de sistemas de información
+
+Nicolas Romero - Base de datos 1
+Ingeniero mecatronico
