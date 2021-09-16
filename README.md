@@ -15,3 +15,6 @@ Estudiante de Analisis de desarrollo de sistemas de información
 
 Nicolas Romero - Base de datos 1
 Ingeniero mecatronico
+
+Daniela Villada Saavedra- Desarrollo sprint 1
+Estudante de Ing Ambiental 
