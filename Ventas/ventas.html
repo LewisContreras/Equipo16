@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Ventas
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<title>Grupo 16 Ventas</title>    
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Identificador de la Venta</label><label class="validation-error hide" id="fullNameValidationError">Identificador de venta obligatorio.</label>
+                        <input type="text" name="idventa" id="idventa">
+                    </div>
+                    <div>
+                        <label>Documento del Cliente</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label>Nombre del Cliente</label>
+                        <input type="text" name="Ncliente" id="Ncliente">
+                    </div>
+                    <div>
+                        <label>Descripción producto </label>
+                        <input type="text" name="Dproducto" id="Dproducto">
+                    </div> 
+					
+					          <div>
+                        <label>Valor unitario </label>
+                        <input type="text" name="valorU" id="valorU">
+                    </div> 
+					<div>
+                        <label>Cantidad </label>
+                        <input type="text" name="cantidad" id="cantidad">
+                    </div> 
+					
+										<div>
+                        <label>Total producto </label>
+                        <input type="text" name="total" id="total">
+                    </div> 
+					
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Guardar">
+                    </div>
+					
+					
+					
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Id de la venta</th>
+                            <th>Id del cliente </th>
+                            <th>Nombre del cliente</th>
+                            <th>Descripción</th>
+							<th>Valor Unitario</th>
+							<th>Cantidad</th>
+							<th>Total</th>
+							
+							
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script_ventas.js"></script>
+</body>
+
+</html>
