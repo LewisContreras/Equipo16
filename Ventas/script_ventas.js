@@ -20,6 +20,8 @@ function readFormData() {
 	formData["valorU"] = document.getElementById("valorU").value;
 	formData["cantidad"] = document.getElementById("cantidad").value;
 	formData["total"] = document.getElementById("total").value;
+	formData["vendedor"] = document.getElementById("vendedor").value;
+	formData["estado"] = document.getElementById("estado").value;
     return formData;
 }
 
@@ -40,9 +42,17 @@ function insertNewRecord(data) {
     cell6.innerHTML = data.cantidad;
 	cell7 = newRow.insertCell(6);
     cell7.innerHTML = data.total;
-    cell8 = newRow.insertCell(7);
-    cell8.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+	cell8 = newRow.insertCell(7);
+    cell8.innerHTML = data.vendedor;
+	cell9 = newRow.insertCell(8);
+    cell9.innerHTML = data.estado;
+    cel20 = newRow.insertCell(9);
+    cel20.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
+
+	window.alert("El registro ha sido creado con éxito");
+	
+
 }
 
 function resetForm() {
@@ -53,6 +63,8 @@ function resetForm() {
 	document.getElementById("valorU").value = "";
 	document.getElementById("cantidad").value = "";
 	document.getElementById("total").value = "";
+	document.getElementById("vendedor").value = "";
+	document.getElementById("estado").value = "";
 	
     selectedRow = null;
 }
@@ -66,6 +78,8 @@ function onEdit(td) {
     document.getElementById("valorU").value = selectedRow.cells[4].innerHTML;
 	document.getElementById("cantidad").value = selectedRow.cells[5].innerHTML;
 	document.getElementById("total").value = selectedRow.cells[6].innerHTML;
+	document.getElementById("vendedor").value = selectedRow.cells[7].innerHTML;
+	document.getElementById("estado").value = selectedRow.cells[7].innerHTML;
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.idventa;
@@ -75,12 +89,14 @@ function updateRecord(formData) {
 	selectedRow.cells[4].innerHTML = formData.valorU;
 	selectedRow.cells[5].innerHTML = formData.cantidad;
 	selectedRow.cells[6].innerHTML = formData.total;
+	selectedRow.cells[7].innerHTML = formData.vendedor;
+	selectedRow.cells[8].innerHTML = formData.estado;
 	
 	
 }
 
 function onDelete(td) {
-    if (confirm('Are you sure to delete this record ?')) {
+    if (confirm('¿Está seguro que desea eliminar el registro?')) {
         row = td.parentElement.parentElement;
         document.getElementById("employeeList").deleteRow(row.rowIndex);
         resetForm();
