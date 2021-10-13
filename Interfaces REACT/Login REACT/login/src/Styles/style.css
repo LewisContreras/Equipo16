@@ -1,0 +1,75 @@
+body  
+{  
+    margin: 10;  
+    padding: 10;  
+    background-color:#eeeded;  
+    font-family: 'Arial';  
+    text-align: center;  
+}  
+.login{  
+        width: 582px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 100 0 0 450px;  
+        padding: 70px;  
+        background: #a1b8a8;  
+        border-radius: 55px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: #696969;  
+    padding: 14px;  
+}  
+label{  
+    color: #141313;  
+    font-size: 14px;  
+    text-align: right;  
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 31px;  
+    padding-left: 10px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 31px;  
+    padding-left: 10px;  
+      
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 17px;  
+    color:rgb(2, 2, 2);  
+
+ }
+  
+#Correo{ width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color:rgb(245, 246, 248);
+    background-color: rgb(44, 103, 212);
+
+
+}  
+span{  
+    color: rgb(8, 3, 3);  
+    font-size: 17px;  
+    text-align: center;  
+}  
+a{  
+    float: right;  
+    background-color: grey;  
+} 
+
+/*Estilo del formulario para Ventas - Charles H*/
+
