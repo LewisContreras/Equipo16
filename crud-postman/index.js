@@ -1,12 +1,15 @@
 /**importamos el paquete de express**/
 const express = require('express');
 require("dotenv").config();
+const {mongoConection} = require("./database/config");
 //console.log(process.env);
 
 /**Crear como un servidor a express, una instalcia de express llamada app **/
 /**Definiciòn del endpoint **/
 const app = express();
 
+/*Conexión a BD Mongo*/
+mongoConection();
 
 /**Crear el directorio publico con la funcion midleware antes de llegar a las rutas, public carpeta creada **/
 app.use(express.static("public"));
