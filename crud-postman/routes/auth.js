@@ -1,3 +1,4 @@
+//RUTAS
 
 const{Router} = require('express');
 //**Charck es un midleware* */
@@ -7,6 +8,8 @@ const router = Router();
 const {crearUsuario,crearProducto} = require('../controllers/auth');
 
 //**Definición de los Endpoint productos y usuarios**/
+
+
 //**Router.metodo(path)**/
 router.post('/insert',
 [
@@ -27,9 +30,15 @@ router.post('/',
   check('id','El id de producto es obligatorio').not().isEmpty().isNumeric(),
   check('producto','El producto debe tener una descripciòn').not().isEmpty(),
   check('precio','El valor del producto debe ser numerico').not().isEmpty().isNumeric(),
+  check('estado','El valor del estado es obligatorio').not().isEmpty(),
+
 
 ] ,
 crearProducto);
+
+
+
+
 
 
 /** 
@@ -42,7 +51,6 @@ router.post('/new', (req,res) => {
 });
 
 **/
-
 
 
 

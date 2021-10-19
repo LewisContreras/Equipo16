@@ -17,8 +17,23 @@ app.use(express.static("public"));
 //**Hace el parceo de los cuerpos en formato json **/
 app.use(express.json());
 
-//**Ruta padre de los endpoints**/
+//**Ruta padre de los endpoints, auth es el recurso**/
 app.use('/api/auth', require('./routes/auth'));
+
+
+app.use('/api/productos', require('./routes/productos'));
+
+
+
+
+//**Ruta padre de los endpoints, auth es el recurso**/
+
+
+
+
+
+
+
 
 /**Crear rutas de acceso, recibe la ruta con la que va a ingresar y un callback
     app.get("/", (req,res) => {

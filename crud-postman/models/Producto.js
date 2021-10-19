@@ -11,12 +11,17 @@ const productoS = Schema({
 
     producto: {
         type:String,
-        require:true
+        require:false
     },
 
     precio: {
         type:Number,
-        require:true
+        require:false
+    },
+
+    estado: {
+        type:String,
+        require:false
     }
 });
 
