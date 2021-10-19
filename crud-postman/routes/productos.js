@@ -2,7 +2,7 @@ const{Router} = require('express');
 
 const router = Router();
 
-const {insertarProducto,listarProducto,eliminarProducto} = require('../controllers/producto');
+const {insertarProducto,listarProducto,eliminarProducto,actualizarProducto} = require('../controllers/producto');
 
 
 //Listar todo de la BD GET
@@ -13,7 +13,7 @@ router.get('/listar/:id',listarProducto);
 
 
 //Listar todo de la BD PUT actualziar
-//router.put('/actualizar/:id',actualizarProducto);
+router.put('/actualizar/:id',actualizarProducto);
 
 
 //Listar todo de la BD delete

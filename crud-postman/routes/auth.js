@@ -5,7 +5,7 @@ const{Router} = require('express');
 const{check} = require("express-validator");
 const router = Router();
 
-const {crearUsuario,crearProducto} = require('../controllers/auth');
+const {crearUsuario,listarUsuario,eliminarUsuario,actualizarUsuario} = require('../controllers/auth');
 
 //**Definición de los Endpoint productos y usuarios**/
 
@@ -25,20 +25,18 @@ crearUsuario
 );
 
 
-router.post('/',
-[
-  check('id','El id de producto es obligatorio').not().isEmpty().isNumeric(),
-  check('producto','El producto debe tener una descripciòn').not().isEmpty(),
-  check('precio','El valor del producto debe ser numerico').not().isEmpty().isNumeric(),
-  check('estado','El valor del estado es obligatorio').not().isEmpty(),
 
 
-] ,
-crearProducto);
+//Listar todo de la BD GET
+router.get('/listar/:id',listarUsuario);
 
 
+//Listar todo de la BD delete
+router.delete('/eliminar/:id',eliminarUsuario);
 
 
+//Listar todo de la BD PUT actualziar
+router.put('/actualizar/:id',actualizarUsuario);
 
 
 /** 

@@ -2,42 +2,146 @@
 	"info": {
 		"_postman_id": "8fa2446c-6854-44ea-a14e-8b968faeee1e",
 		"name": "CRUD-UDEA",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "CrearUsuario",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"Charles\",\r\n    \"id\":\"80739415\",\r\n    \"Password\":\"12345678\",\r\n    \"estado\":\"Activo\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Productos",
+			"item": [
+				{
+					"name": "CrearProducto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"0010\",\r\n    \"producto\":\"Telefono Android 10\",\r\n    \"precio\":\"1900000\",\r\n    \"estado\":\"Activo\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/productos/insertar",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"productos",
+								"insertar"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": "localhost:4000/api/auth/insert"
-			},
-			"response": []
+				{
+					"name": "listarProducto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"006\",\r\n    \"producto\":\"Computador Compac\",\r\n    \"precio\":\"2700000\",\r\n    \"estado\":\"Activo\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/productos/listar/616e34139af9cec4eb0635eb",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"productos",
+								"listar",
+								"616e34139af9cec4eb0635eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarProducto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"008\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/productos/eliminar/616e34889af9cec4eb0635f8",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"productos",
+								"eliminar",
+								"616e34889af9cec4eb0635f8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
-			"name": "CrearProducto",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"id\":\"123\",\r\n    \"producto\":\"Disco USB\",\r\n    \"precio\":\"240000\"\r\n\r\n\r\n\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "CrearUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Charles\",\r\n    \"id\":\"80739415\",\r\n    \"Password\":\"12345678\",\r\n    \"estado\":\"Activo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/insert",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"insert"
+							]
 						}
-					}
-				},
-				"url": "localhost:4000/api/auth/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "insertarProducto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
 			},
 			"response": []
 		}
