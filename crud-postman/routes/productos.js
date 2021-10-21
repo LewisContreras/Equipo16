@@ -2,7 +2,7 @@ const{Router} = require('express');
 
 const router = Router();
 
-const {insertarProducto,listarProducto,eliminarProducto,actualizarProducto} = require('../controllers/producto');
+const {insertarProducto,listarProducto,eliminarProducto,actualizarProducto,listarProductoT} = require('../controllers/producto');
 
 
 //Listar todo de la BD GET
@@ -10,6 +10,8 @@ router.post('/insertar',insertarProducto);
 
 //Listar todo de la BD GET
 router.get('/listar/:id',listarProducto);
+
+router.get('/listar/',listarProductoT);
 
 
 //Listar todo de la BD PUT actualziar

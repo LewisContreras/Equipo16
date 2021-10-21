@@ -134,7 +134,25 @@ const actualizarProducto = async (req, resp = response) => {
 }
  
 
+//consultar producto 
+const listarProductoT = async (req,resp=response) =>{
+    
+    const productoId = req.params.id;
+    //const producto = await Producto.findById(productoId);
+    const productos = await Producto.find()
+                                    .populate('id');
+    
+    resp.status(200).json({
+        ok:true,
+        msg:'Llama metodo de ListarProductoT', 
+        //productos
+        productos
+
+      });
+
+}
 
 
 
-module.exports= {insertarProducto,listarProducto,eliminarProducto,actualizarProducto};
+
+module.exports= {insertarProducto,listarProducto,eliminarProducto,actualizarProducto,listarProductoT};

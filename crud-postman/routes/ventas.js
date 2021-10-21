@@ -5,7 +5,7 @@ const{Router} = require('express');
 
 const router = Router();
 
-const {insertarVenta,listarVenta,eliminarVenta,actualizarVenta} = require('../controllers/venta');
+const {insertarVenta,listarVenta,eliminarVenta,actualizarVenta,listarVentaT,listarVentaV} = require('../controllers/venta');
 
 
 //Listar todo de la BD GET
@@ -13,6 +13,14 @@ router.post('/insertar',insertarVenta);
 
 //Listar todo de la BD GET
 router.get('/listar/:id',listarVenta);
+
+
+//Listar todo de la BD GET
+router.get('/listar/',listarVentaT);
+
+//Listar por vendedor 
+router.get('/listar/:vendedorId',listarVentaV);
+
 
 
 //Listar todo de la BD PUT actualziar

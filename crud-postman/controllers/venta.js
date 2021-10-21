@@ -1,5 +1,6 @@
 const {response} = require('express');
 const Venta = require('../models/Venta');
+
 const {validationResult}=require("express-validator");
 
 //Insertar producto
@@ -60,6 +61,47 @@ const listarVenta = async (req,resp=response) =>{
       });
 
 }
+
+
+//consultar todas ventas 
+const listarVentaT = async (req,resp=response) =>{
+    
+    const ventaId = req.params.id;
+    const venta = await Venta.find()
+                                    .populate('id');
+    
+    resp.status(200).json({
+        ok:true,
+        msg:'Llama metodo de ListarVentaT', 
+        //productos
+        venta
+
+      });
+
+}
+
+//consultar todas ventas por vendedor 
+const listarVentaV = async (req,resp=response) =>{
+    
+    
+    const ventaId = req.params.vendedorId;
+    console.log(ventaId);
+
+    //const venta = await Venta.findById(ventaId);
+    const venta = await Venta.find()
+                                    .populate('ventaId');
+    
+    resp.status(200).json({
+        ok:true,
+        msg:'Llama metodo de ListarVentaV', 
+        //productos
+        venta
+
+      });
+
+}
+
+
 
 
 
@@ -143,4 +185,4 @@ const actualizarVenta = async (req, resp = response) => {
 
 
 
-module.exports= {insertarVenta,listarVenta,eliminarVenta,actualizarVenta};
+module.exports= {insertarVenta,listarVenta,eliminarVenta,actualizarVenta,listarVentaT,listarVentaV};

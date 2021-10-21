@@ -45,9 +45,12 @@ const ventaS = Schema({
     vendedor: {
         type:String,
         require:false
+    },
+    vendedorId: {
+        type:Number,
+        require:false
     }
-  
-
+    
 
     
 });
