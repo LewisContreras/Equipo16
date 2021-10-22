@@ -28,6 +28,7 @@ app.use('/api/productos', require('./routes/productos'));
 
 app.use('/api/ventas', require('./routes/ventas'));
 
+app.use('/api/login', require('./routes/login'));
 
 //**Ruta padre de los endpoints, auth es el recurso**/
 

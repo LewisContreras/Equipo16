@@ -47,6 +47,9 @@ const insertarVenta = (req,resp=response) =>{
 //consultar producto 
 const listarVenta = async (req,resp=response) =>{
     
+
+    const {id,codigo,producto,precio,estado,cliente,cantidad,total,vendedor,vendedorId} = req.body
+
     const ventaId = req.params.id;
     const venta = await Venta.findById(ventaId);
     //const productos = await Producto.find()
@@ -54,9 +57,20 @@ const listarVenta = async (req,resp=response) =>{
     
     resp.status(200).json({
         ok:true,
-        msg:'Llama metodo de ListarProducto', 
+        msg:'Llama metodo de ListarProductoVededor', 
         //productos
-        venta
+        venta,
+        id,
+        codigo,
+        producto,
+        precio,
+        estado,
+        cliente,
+        cantidad,
+        total,
+        vendedor,
+        vendedorId
+
 
       });
 
@@ -66,9 +80,14 @@ const listarVenta = async (req,resp=response) =>{
 //consultar todas ventas 
 const listarVentaT = async (req,resp=response) =>{
     
-    const ventaId = req.params.id;
-    const venta = await Venta.find()
-                                    .populate('id');
+
+    
+    const {vendedorId} = req.body
+
+  
+    //const ventaId = req.params.id;
+    const venta = await Venta.findOne()
+                                    .populate(vendedorId);
     
     resp.status(200).json({
         ok:true,
