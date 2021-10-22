@@ -22,7 +22,15 @@ const usuarioS = Schema({
     estado: {
         type:String,
         require:true
+    },
+    
+    correo: {
+        type:String,
+        require:true
     }
+
+
+
 });
 
 module.exports=model('Usuario', usuarioS);
