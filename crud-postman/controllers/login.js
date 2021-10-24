@@ -4,17 +4,21 @@ const Login = require('../models/Login');
 const {validationResult}=require("express-validator");
 const bcrypt = require('bcryptjs');
 const { generarJWT } = require('../helpers/jwt');
+const Usuario = require('../models/Usuario');
 
 
 const loginUsuario = async (req, resp = response) => {
-
+ 
     const { email, password } = req.body;
-
+    console.log(email);
+    console.log(password);
+    //password es el que se recibe desde postman
     try {
 
         /**Confirmar email */
         let usuario = await Usuario.findOne({ email }); 
-        
+        console.log(usuario);
+
         if(!usuario) {
             resp.status(400).json({
                 ok: true,
@@ -24,12 +28,16 @@ const loginUsuario = async (req, resp = response) => {
 
         /**Confirmar email */
 
-        const validPassword = bcrypt.compareSync(password, usuario.password);
-
+        const validPassword = bcrypt.compareSync(password, usuario.Password);
+        console.log(validPassword);
+        console.log(password);
+        console.log(usuario.Password);    
+        
         if(!validPassword) {
-            resp.status(400).json({
+            console.log("Entro al if");
+            return resp.status(400).json({
                 ok: true,
-                msg: 'Usuario y/o contraseña incorrecta'
+                msg: 'Usuario y/o contraseña incorrecta 1'
             });
         }
 
@@ -44,8 +52,8 @@ const loginUsuario = async (req, resp = response) => {
             token
         });
         
-    } catch (error) {
-        console.log(error)
+    } catch (error) { 
+            console.log(error)
         resp.status(500).json({
             ok: false,
             msg: 'error al autenticar',

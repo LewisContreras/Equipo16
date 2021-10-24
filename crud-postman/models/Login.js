@@ -5,11 +5,11 @@ const logiN = Schema({
     email: {
         type:String,
         require:true,
-        unique:true
+        unique:false
 
     },
     password: {
-        type:Number,
+        type:String,
         require:true
     }
     
