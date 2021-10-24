@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "8fa2446c-6854-44ea-a14e-8b968faeee1e",
+		"name": "CRUD-UDEA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "CrearProducto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"0010\",\r\n    \"producto\":\"Telefono Android 10\",\r\n    \"precio\":\"1900000\",\r\n    \"estado\":\"Activo\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/productos/insertar",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"productos",
+								"insertar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarProducto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"006\",\r\n    \"producto\":\"Computador Compac\",\r\n    \"precio\":\"2700000\",\r\n    \"estado\":\"Activo\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/productos/listar/616e34139af9cec4eb0635eb",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"productos",
+								"listar",
+								"616e34139af9cec4eb0635eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarTodosProducto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"006\",\r\n    \"producto\":\"Computador Compac\",\r\n    \"precio\":\"2700000\",\r\n    \"estado\":\"Activo\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/productos/listar/",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"productos",
+								"listar",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarProducto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"008\",\r\n    \"producto\":\"Tablet Mac S5\",\r\n    \"precio\":\"5700000\",\r\n    \"estado\":\"Activo\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/productos/actualizar/61733fe55e83a912b40d79c6",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"productos",
+								"actualizar",
+								"61733fe55e83a912b40d79c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarProducto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"008\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/productos/eliminar/616e34889af9cec4eb0635f8",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"productos",
+								"eliminar",
+								"616e34889af9cec4eb0635f8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ventas",
+			"item": [
+				{
+					"name": "CrearVenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"501\",\r\n    \"codigo\":\"12\",\r\n    \"producto\":\"Portatil COmpac\",\r\n    \"precio\":\"110000\",\r\n    \"estado\":\"Activo\",\r\n    \"cliente\":\"Charles Holguin\",\r\n    \"cantidad\":\"30\",\r\n    \"total\":\"30\",\r\n    \"vendedor\":\"Charles2\",\r\n    \"vendedorId\":\"80739415\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/ventas/insertar",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"ventas",
+								"insertar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarVenta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"006\",\r\n    \"producto\":\"Computador Compac\",\r\n    \"precio\":\"2700000\",\r\n    \"estado\":\"Activo\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/productos/listar/616e34139af9cec4eb0635eb",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"productos",
+								"listar",
+								"616e34139af9cec4eb0635eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarVentaTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"006\",\r\n    \"producto\":\"Computador Compac\",\r\n    \"precio\":\"2700000\",\r\n    \"estado\":\"Activo\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/ventas/listar/",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"ventas",
+								"listar",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarVentaVendedor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vendedorId\":\"80739420\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/ventas/listar/6170b823bc9a952e2c646fb7",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"ventas",
+								"listar",
+								"6170b823bc9a952e2c646fb7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarVenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"15\",\r\n    \"codigo\":\"115\",\r\n    \"producto\":\"Portatil MAC-iOS\",\r\n    \"precio\":\"7800000\",\r\n    \"estado\":\"Activo\",\r\n    \"cliente\":\"Charles H\",\r\n    \"cantidad\":\"10\",\r\n    \"total\":\"10\",\r\n    \"vendedor\":\"Charles H\",    \r\n    \"vendedorId\":\"80739420\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/ventas/actualizar/6173408b5e83a912b40d79d1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"ventas",
+								"actualizar",
+								"6173408b5e83a912b40d79d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarVenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"008\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/ventas/eliminar/616e34889af9cec4eb0635f8",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"ventas",
+								"eliminar",
+								"616e34889af9cec4eb0635f8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "CrearUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Charles\",\r\n    \"id\":\"1100961954\",\r\n    \"Password\":\"123456999\",\r\n    \"estado\":\"No Autorizado\",\r\n    \"correo\":\"charlesholguin_4@hotmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/insert",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"charlesholguin_4@hotmail.com\",\r\n    \"password\":\"$2a$10$nnuz50caQaFEGGsmXLgeP.9odryrVhDGGjaWHIfM.dDlbRWuuDKKa\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/login/new",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"login",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Charles Holguin Ordoñez\",\r\n    \"id\":\"80739415\",\r\n    \"Password\":\"123456999\",\r\n    \"estado\":\"No Autorizado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/actualizar/616ee1c8d607e4e24e6543d1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"actualizar",
+								"616ee1c8d607e4e24e6543d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarUsuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"006\",\r\n    \"producto\":\"Computador Compac\",\r\n    \"precio\":\"2700000\",\r\n    \"estado\":\"Activo\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/listar/616ee1c8d607e4e24e6543d1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"listar",
+								"616ee1c8d607e4e24e6543d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"008\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/eliminar/616ee1a8d607e4e24e6543ce",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"eliminar",
+								"616ee1a8d607e4e24e6543ce"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
