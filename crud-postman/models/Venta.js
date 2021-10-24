@@ -55,5 +55,10 @@ const ventaS = Schema({
     
 });
 
+
+
+
 module.exports=model('Venta', ventaS);
+
+
 //var schema = new schema ({nombre:String},{collection:'usuarios'});  autorizado, no, pendiente--- 

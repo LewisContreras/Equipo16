@@ -19,7 +19,7 @@ router.get('/listar/:id',listarVenta);
 router.get('/listar/',listarVentaT);
 
 //Listar por vendedor 
-router.get('/listar/:vendedorId',listarVentaV);
+router.get('/listar/:id',listarVentaV);
 
 
 

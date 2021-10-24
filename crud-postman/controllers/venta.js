@@ -1,5 +1,6 @@
 const {response} = require('express');
 const Venta = require('../models/Venta');
+const ventaC = require('../models/CVenta');
 
 const {validationResult}=require("express-validator");
 
@@ -103,13 +104,26 @@ const listarVentaT = async (req,resp=response) =>{
 const listarVentaV = async (req,resp=response) =>{
     
     
-    const ventaId = req.params.vendedorId;
-    console.log(ventaId);
+    //const ventaId = req.params.vendedorId;
+    //console.log(ventaId);
 
     //const venta = await Venta.findById(ventaId);
-    const venta = await Venta.find()
-                                    .populate('ventaId');
+    //const venta = await Venta.find()
+    //                                .populate('ventaId');
     
+    ///Nueva validacion un solo usuario
+    const {vendedorId} = req.body
+    console.log(vendedorId);
+    
+    /**Confirmar Usuario */
+    let CventaS = await Usuario.findOne({ vendedorId }); 
+    console.log(CventaS);
+
+    ///Nueva validacion un solo usuario
+
+
+
+                                    
     resp.status(200).json({
         ok:true,
         msg:'Llama metodo de ListarVentaV', 
