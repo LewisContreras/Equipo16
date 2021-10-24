@@ -33,24 +33,30 @@ const loginUsuario = async (req, resp = response) => {
         console.log(password);
         console.log(usuario.Password);    
         
-        if(!validPassword) {
+        if (password == usuario.Password){
+            console.log("Comparación Ok son iguales las cadenas");
+            
+            /**Generar Token */
+            const token = await generarJWT(usuario.id, usuario.name);
+
+            resp.json({
+                ok: true,
+                msg: 'Ok',
+                uid: usuario.id,
+                name: usuario.name,
+                token
+        });
+        
+        }    
+
+        else{
             console.log("Entro al if");
             return resp.status(400).json({
                 ok: true,
-                msg: 'Usuario y/o contraseña incorrecta 1'
+                msg: 'Usuario y/o contraseña incorrecta else'
             });
         }
 
-        /**Generar Token */
-        const token = await generarJWT(usuario.id, usuario.name);
-
-        resp.json({
-            ok: true,
-            msg: 'Ok',
-            uid: usuario.id,
-            name: usuario.name,
-            token
-        });
         
     } catch (error) { 
             console.log(error)
